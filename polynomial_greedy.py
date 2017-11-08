@@ -1,6 +1,3 @@
-# Heuristic --> Rule out exponential algorithms with a decent amount of constraints 
-
-
 def mapper(constraints, alphabet):
 
 	# Initialization the main mapping

@@ -1,0 +1,5 @@
+# Heuristic --> Rule out exponential algorithms with a decent amount of constraints 
+# Heuristic 2: 
+	# There always has to be one element not in the constraint list at all 
+	# We can take this element and put it in the middle 
+# There is never one unique answer --> We can always swap beginning and end 
