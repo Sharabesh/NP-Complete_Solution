@@ -1,10 +1,22 @@
 20 
 a b c d e f g h i j k l m n o p q r s t 
-19
+59
+a b c
+c b a
+k j t
+f g h
+a i j
+j o s
+s a t
+n e c
+l m k
+i q a
+b d f
 c a d
 d b a
 c d a
 e f a
+n r t
 a o r
 k b a
 k p s
@@ -20,3 +32,31 @@ m a o
 e g h
 a b q
 h b o 
+l h a
+l h b
+l h c
+l h m
+l h s
+k j a
+k j b
+k j r
+d c a
+m n o
+n o p
+t s r
+s t e
+i e d
+t f e
+f t e
+l k a
+q p r
+i k l
+i j l
+r q s
+a e f
+g h i 
+h f e
+s n t
+h c b
+b c h 
+t i e
