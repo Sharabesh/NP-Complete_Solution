@@ -31,7 +31,7 @@ def fulfils(constraint,ordering):
 	dependency = ordering.index(constraint[-1])
 	first_val = ordering.index(constraint[0])
 	second_val = ordering.index(constraint[1])
-	return dependency < first_val or dependency > second_val
+	return not (first_val<= dependency <= second_val)
 
 
 

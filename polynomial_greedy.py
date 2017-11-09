@@ -37,10 +37,13 @@ def mapper(constraints, alphabet):
 	# Now we have finished exhausting all the constraints 
 	output = [] 
 	count = 1
+	string = ""
 	for key,val in mapping.items():
 		for element in val:
 			output.append((element,count))
+			string += element
 			count += 1
+	print(string)
 	return output 
 		
 
