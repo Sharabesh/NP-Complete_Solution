@@ -7,10 +7,12 @@ def mapper(constraints, alphabet):
 	hq = 0 
 	
 	for i in range(-len(alphabet),len(alphabet)):
-		mapping[i] = set()
+		mapping[i] = []
 
-	# Initialize everything together 
-	mapping[hq].add([x for x in alphabet])
+	# Initialize everything together
+	for letter in alphabet:
+		mapping[hq].append(letter) 
+	# mapping[hq].add(list(alphabet))
 
 	# Now do the actual decomp 
 	for constraint in constraints:
@@ -29,7 +31,7 @@ def mapper(constraints, alphabet):
 			
 
 			# Now put the value in the next available spot 
-			mapping[ages[1]].add(constraint[-1])
+			mapping[ages[1]].insert(0,constraint[-1])
 
 
 	# Now we have finished exhausting all the constraints 
@@ -37,7 +39,7 @@ def mapper(constraints, alphabet):
 	count = 1
 	for key,val in mapping.items():
 		for element in val:
-			output.append(element,count)
+			output.append((element,count))
 			count += 1
 	return output 
 		

@@ -1,9 +1,17 @@
 import itertools 
 
+def parser(filename):
+	with open(filename,"r") as file:
+		k = file.readlines()
+	wizards = k[1].replace(" ","").replace("\n","")
+	constraint_list = [] 
+	for element in k[3:]:
+		constraint_list.append(element.replace(" ","").replace("\n",""))
+	return (wizards,constraint_list)
 
 
 
-def wizards(numWiz, numCon, array_Wiz, arrayCon):
+def wizards(array_Wiz, arrayCon):
 	allCombos = itertools.permutations(array_Wiz,len(array_Wiz))
 	for item in allCombos:
 		print("Item is: ","".join(item))
