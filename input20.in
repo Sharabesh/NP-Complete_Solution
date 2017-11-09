@@ -1,6 +1,9 @@
 20 
 a b c d e f g h i j k l m n o p q r s t 
-55
+59
+a b c
+c b a
+k j t
 f g h
 a i j
 j o s
@@ -13,6 +16,7 @@ c a d
 d b a
 c d a
 e f a
+n r t
 a o r
 k b a
 k p s
@@ -56,3 +60,9 @@ s n t
 h c b
 b c h 
 t i e
+
+
+
+
+
+
