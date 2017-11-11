@@ -1,3 +1,7 @@
+import sys 
+from UF import *
+
+
 def mapper(constraints, alphabet):
 
 	# Initialization the main mapping
@@ -49,10 +53,6 @@ def mapper(constraints, alphabet):
 
 
 
-
-
-
-
 def finder(mapping,key): # key = "abc" 
 	first_letter = key[0]
 	second_letter = key[1]
@@ -66,6 +66,39 @@ def finder(mapping,key): # key = "abc"
 		if third_letter in val:
 			result[2] = key
 	return result 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

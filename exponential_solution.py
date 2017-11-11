@@ -1,5 +1,7 @@
 import itertools 
 import random
+import numpy as np 
+from math import e
 
 
 def parser(filename):
@@ -184,6 +186,75 @@ def write_output(seq,filename):
 		file.write(line2 + "\n")
 		file.writelines([x + "\n" for x in lines3])
 	return "DONE" 
+
+
+def markov_solver(constraints,wizards):
+	num_constraints = len(list(set(constraints)))
+	constraints = list(set(constraints))
+	# Swap state
+	
+	constraints_violated_current = num_constraints - np.count_nonzero([fulfils(x,wizards) for x in constraints])
+
+	new_state = list(wizards)
+
+	beta =  1.5 # Update beta's 
+
+	while constraints_violated_current > 0:
+		
+		new_state = list(wizards)
+
+		for i in range(1):	# Big jumps at the beginning 
+			start_swap = random.randint(0,len(wizards)-1)
+			end_swap = random.randint(0,len(wizards)-1)
+			new_state[start_swap],new_state[end_swap] = new_state[end_swap],new_state[start_swap]
+
+		print(wizards, "".join(new_state))
+		constraints_violated_new = num_constraints - np.count_nonzero([fulfils(x,"".join(new_state)) for x in constraints])
+		try:
+			probability_transfer = e ** (beta*(constraints_violated_current - constraints_violated_new))
+		except ZeroDivisionError:
+			return "".join(new_state)
+		selection = random.random() 
+		print(constraints_violated_current) # Weight the constraints somehow
+		if selection < probability_transfer:
+			wizards = "".join(new_state)
+			constraints_violated_current = constraints_violated_new
+
+	return "".join(new_state)
+	
+def markov_walk(constraints,wizards):
+	num_constraints = len(list(set(constraints)))
+	constraints = list(set(constraints))
+	# Swap state
+	
+	constraints_violated_current = num_constraints - np.count_nonzero([fulfils(x,wizards) for x in constraints])
+
+	new_state = list(wizards)
+	for k in range(100):
+		
+		new_state = list(wizards)
+
+		for i in range(1):	
+			start_swap = random.randint(0,len(wizards)-1)
+			end_swap = random.randint(0,len(wizards)-1)
+			new_state[start_swap],new_state[end_swap] = new_state[end_swap],new_state[start_swap]
+
+		print(wizards, "".join(new_state))
+		constraints_violated_new = num_constraints - np.count_nonzero([fulfils(x,"".join(new_state)) for x in constraints])
+		try:
+			probability_transfer = constraints_violated_current/constraints_violated_new
+		except ZeroDivisionError:
+			return "".join(new_state)
+		selection = random.random() 
+		print(constraints_violated_current)
+		if True:
+			wizards = "".join(new_state)
+			constraints_violated_current = constraints_violated_new
+
+	return "".join(new_state)
+
+
+
 
 
 
