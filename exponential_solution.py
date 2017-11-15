@@ -64,6 +64,8 @@ def supervisor(output_file):
 		actual_ordering = ""
 		for element in return_val:
 			actual_ordering += backwards_mapping[element] + " "
+		with open(output_file,"wa") as file:
+			file.write(actual_ordering.strip() + "\n\n\n")
 		output.append(actual_ordering.strip() + "\n\n\n\n")
 	with open(output_file,"w+") as file:
 		file.writelines(output)
