@@ -263,6 +263,20 @@ def markov_solver(constraints,wizards):
 
 		print(wizards, "".join(new_state))
 		constraints_violated_new = num_constraints - np.count_nonzero([fulfils(x,"".join(new_state)) for x in constraints])
+
+		# New additions
+		if constraints_violated_new < 10:
+			beta = 5
+
+		elif constraints_violated_new <= 20:
+			beta = 2.5
+
+		elif constraints_violated_new <= 30:
+			beta = 2.0
+
+
+		# End new additions
+
 		try:
 			probability_transfer = e ** (beta*(constraints_violated_current - constraints_violated_new))
 		except ZeroDivisionError:
