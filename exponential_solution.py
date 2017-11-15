@@ -2,7 +2,8 @@ import itertools
 import random
 import numpy as np 
 from math import e
-
+import string
+import os
 
 def parser(filename):
 	with open(filename,"r") as file:
@@ -13,7 +14,59 @@ def parser(filename):
 		constraint_list.append(element.replace(" ","").replace("\n",""))
 	return (list(wizards),constraint_list)
 
+def new_parser(filename):
+	# Convert wizards into single char representations
+	total_mapping = string.ascii_lowercase + string.ascii_uppercase
+	forward_mapping = {}
+	backwards_mapping = {}
 
+	with open(filename,"r") as file:
+		k = file.readlines()
+	num_wizards = k[0].replace("\n","")
+	num_constraints = k[1].replace("\n","")
+	constraints_list = [] 
+	# Gather all the data 
+	wiz_set = set()
+	for element in k[2:]:
+		constraints_list.append(element.replace("\n","").strip())
+		for item in element.replace("\n","").split():
+			wiz_set.add(item)
+
+	# Convert all the data to single character representations
+	i = 0
+	for element in wiz_set:
+		target_char = total_mapping[i]
+		forward_mapping[element] = target_char
+		backwards_mapping[target_char] = element
+		i+=1 
+
+	new_wiz_set = []
+	for element in wiz_set:
+		new_wiz_set.append(forward_mapping[element])
+	new_constraints_lst = []
+	for constraint in constraints_list:
+		curr_constraints = ""
+		elements = constraint.split()
+		for wizard in elements:
+			curr_constraints += forward_mapping[wizard]
+		new_constraints_lst.append(curr_constraints)
+
+
+	return ("".join(new_wiz_set),new_constraints_lst,backwards_mapping)
+
+
+def supervisor(output_file):
+	output = []
+	files = [x for x in os.listdir(".") if x!= output_file]
+	for input_file in files:
+		wiz,constraints,backwards_mapping = new_parser(input_file)
+		return_val = markov_solver(constraints,wiz)
+		actual_ordering = ""
+		for element in return_val:
+			actual_ordering += backwards_mapping[element] + " "
+		output.append(actual_ordering.strip() + "\n\n\n\n")
+	with open(output_file,"w+") as file:
+		file.writelines(output)
 
 def wizards(array_Wiz, arrayCon):
 	valid = []
