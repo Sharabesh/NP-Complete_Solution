@@ -101,8 +101,8 @@ def supervisor():
 			actual_ordering += backwards_mapping[element] + " "
 		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7],input_file[-4])
 		with open(output_file, "a") as file:
-			file.write(actual_ordering.strip() + "\n\n\n")
-		output.append(actual_ordering.strip() + "\n\n\n\n")
+			file.write(actual_ordering.strip())
+		output.append(actual_ordering.strip())
 		os.system("say {0}".format(input_file))
 	return output
 

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8b7ffc-1d1e-45ef-8f59-b6489795484b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/constraintGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abeValidator.py" afterPath="$PROJECT_DIR$/abeValidator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exponential_solution.py" afterPath="$PROJECT_DIR$/exponential_solution.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outputs/output20_0.out" afterPath="$PROJECT_DIR$/outputs/output20_0.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outputs/output20_1.out" afterPath="$PROJECT_DIR$/outputs/output20_1.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outputs/output20_2.out" afterPath="$PROJECT_DIR$/outputs/output20_2.out" />
     </list>
     <ignored path="proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="exponential_solution.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exponential_solution.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6180556">
-              <caret line="101" column="94" selection-start-line="101" selection-start-column="94" selection-end-line="101" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.4513889">
+              <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -42,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/outputs/output20_0.out">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="126" selection-start-line="0" selection-start-column="126" selection-end-line="0" selection-end-column="126" />
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,8 +127,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="640" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
+    <option name="width" value="640" />
     <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -471,10 +473,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="746" extended-state="6" />
+    <frame x="640" y="22" width="640" height="746" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2003231" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4147157" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -817,7 +819,7 @@
     <entry file="file://$PROJECT_DIR$/outputs/output20_0.out">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="126" selection-start-line="0" selection-start-column="126" selection-end-line="0" selection-end-column="126" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -850,8 +852,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exponential_solution.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6180556">
-          <caret line="101" column="94" selection-start-line="101" selection-start-column="94" selection-end-line="101" selection-end-column="94" />
+        <state vertical-scroll-proportion="0.4513889">
+          <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
