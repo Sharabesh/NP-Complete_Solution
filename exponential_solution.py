@@ -4,9 +4,11 @@ import numpy as np
 from math import e
 import string
 import os
+import concurrent.futures
 
 
 def supervisor(): # Designed to run within an input directory
+
 	output = []
 	files = sorted([x for x in os.listdir(".") if "output" not in x])
 	for input_file in files:
@@ -18,6 +20,24 @@ def supervisor(): # Designed to run within an input directory
 		output.append(return_val.strip())
 		os.system("say {0}".format(input_file))
 	return output
+
+""" Speed up the process with multithreading"""
+def supervisor_multithreaded():
+	executor = concurrent.futures.ProcessPoolExecutor(10)
+	files = sorted([x for x in os.listdir(".") if "output" not in x])
+	for input_file in files:
+		executor.submit(inner_helper, (input_file))
+
+
+""" A helper method for multithreading """
+def inner_helper(input_file):
+	wiz, constraints = new_parser(input_file)
+	return_val = markov_solver(constraints, wiz)
+	output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7],input_file[-4])
+	with open(output_file, "a") as file:
+		file.write(return_val.strip())
+	os.system("say {0}".format(input_file))
+	return return_val
 
 
 
@@ -101,10 +121,11 @@ def markov_solver(constraints, wizards):
 			[fulfils(x, new_state) for x in constraints])
 
 		# New additions
+
+
 		if constraints_violated_new < 10:
 			beta = 3
-
-		elif constraints_violated_new <= 20:
+		if constraints_violated_new <= 20:
 			beta = 2.5
 
 		elif constraints_violated_new <= 30:
@@ -153,18 +174,13 @@ def markov_solver(constraints, wizards):
 
 
 """ Testing Stuff"""
-def fulfils_k_constraints(ordering, constraints,num,mapping_scheme):
+def fulfils_k_constraints(ordering, constraints,num):
 	total_mapping = string.ascii_lowercase + string.ascii_uppercase
 	i = 0
 	wiz_set = ordering.split()
 	# Generate single character representations
-	curr_ordering = ""
-	# Update the wizards
-	for wizard in wiz_set:
-		curr_ordering += mapping_scheme[wizard]
-	print(curr_ordering)
 
-	fulfillment = np.count_nonzero([fulfils(constraint, curr_ordering) for constraint in constraints])
+	fulfillment = np.count_nonzero([fulfils(constraint, ordering) for constraint in constraints])
 	return (len(constraints) - fulfillment) <= num
 
 
@@ -179,13 +195,13 @@ def find_matching(output_file,num):
 	mapping = {}
 
 	for item in [x for x in os.listdir(".") if x != output_file]:
-		wiz,constraints,backwards_mapping,mapping_scheme = new_parser(item)
+		wiz,constraints = new_parser(item)
 		mapping[item] = []
 		for i in range(len(k)):
 			print("K IS: ", k[i])
 			print("constraints is: ",constraints)
 			try:
-				if fulfils_k_constraints(k[i],constraints,num,mapping_scheme):
+				if fulfils_k_constraints(k[i],constraints,num):
 					mapping[item].append(i)
 			except:
 				pass
