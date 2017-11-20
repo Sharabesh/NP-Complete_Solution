@@ -1,5 +1,15 @@
 import os
+import string
+from itertools import permutations
 
+
+def abeAlphabet(numSize, totalAlphabetLength):
+    alphabet = string.ascii_lowercase
+    permuteThis = ""
+    for i in range(numSize):
+        permuteThis = permuteThis + alphabet[i]
+    perms = [''.join(p) for p in permutations(permuteThis)]
+    return perms[:totalAlphabetLength]
 
 def validate(inputs, outputs):
     # reads the input file of contraints
@@ -14,7 +24,6 @@ def validate(inputs, outputs):
 
     # reads through all our orderings of wizards
     wiz = wiz[0].split(" ")
-    print(wiz)
 
     # checks to see if it satisfies all contraints
     for j in range(2, numConstraints + 2):
@@ -24,20 +33,28 @@ def validate(inputs, outputs):
         # the current constraint that we are trying to satisfy
         currConstraint = k[j].split(" ")[:3]
 
-        # parses for the each wizard in the ordering
+        #parses for the each wizard in the ordering
         first = currConstraint[0]
         second = currConstraint[1]
         third = currConstraint[2]
 
         # makes sure each wizard in our ordering satisfyings the constraint
+        print(wiz)
+        print(first, second, third)
+
         for name in wiz:
             if name == first or name == second:
                 count += 1
-            if name == third and count == 1:
+            if name == third and (count == 0 or count == 2):
                 inMiddle = True
                 count += 1
-        if count != 3 and inMiddle:
-            print("something is wrong here")
+        print("count", count)
+        if count != 3:
+            print("didn't find all three wizards")
+            print(first, second, third)
+            return
+        elif not inMiddle:
+            print("ordering is wrong here")
             print(first, second, third)
             return False
 
@@ -51,11 +68,10 @@ def validate_all(input_dir, output_dir):
     for elem in input_files:
         last_dig = elem[-4]
         file_num = elem[5:7]
-        corresponding = "output{0}_{1}.out".format(file_num,last_dig)
-        if not validate(input_dir + elem,"outputs/" + corresponding):
+        corresponding = "output{0}_{1}.out".format(file_num, last_dig)
+        if not validate(input_dir + elem, "outputs/" + corresponding):
             print(elem + "NOT VALID")
             vals.append(False)
         else:
             vals.append(True)
     return all(vals)
-
