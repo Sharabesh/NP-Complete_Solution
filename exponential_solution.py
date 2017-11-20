@@ -6,11 +6,23 @@ import string
 import os
 
 
+def supervisor(): # Designed to run within an input directory
+	output = []
+	files = sorted([x for x in os.listdir(".") if "output" not in x])
+	for input_file in files:
+		wiz, constraints = new_parser(input_file)
+		return_val = markov_solver(constraints, wiz)
+		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7],input_file[-4])
+		with open(output_file, "a") as file:
+			file.write(return_val.strip())
+		output.append(return_val.strip())
+		os.system("say {0}".format(input_file))
+	return output
+
+
+
 def new_parser(filename):
 	# Convert wizards into single char representations
-	total_mapping = string.ascii_lowercase + string.ascii_uppercase + "".join([str(k) for k in list(range(10))])
-	forward_mapping = {}
-	backwards_mapping = {}
 
 	with open(filename, "r") as file:
 		k = file.readlines()
@@ -18,38 +30,129 @@ def new_parser(filename):
 	num_wizards = k[0].replace("\n", "")
 	num_constraints = k[1].replace("\n", "")
 
-	constraints_list = []
+	constraints_list = [] # A list of tuples of constraints
 	# Gather all the data
 	wiz_set = set()
 	for element in k[2:]:
-		constraints_list.append(element.replace("\n", "").strip())
+		target = element.replace("\n","").strip().split()
+		constraints_list.append(tuple(target))
 		for item in element.replace("\n", "").split():
 			wiz_set.add(item)
 
 	# Convert all the data to single character representations
-	i = 0
-	for element in wiz_set:
-		target_char = total_mapping[i]
-		forward_mapping[element] = target_char
-		backwards_mapping[target_char] = element
-		i += 1
 
-	new_wiz_set = []
-	for element in wiz_set:
-		new_wiz_set.append(forward_mapping[element])
-	new_constraints_lst = []
-	for constraint in constraints_list:
-		curr_constraints = ""
-		elements = constraint.split()
-		for wizard in elements:
-			curr_constraints += forward_mapping[wizard]
-		new_constraints_lst.append(curr_constraints)
 
-	return ("".join(new_wiz_set), new_constraints_lst, backwards_mapping,forward_mapping)
+	return (list(wiz_set), constraints_list)
 
 
 
 
+
+
+
+
+
+def fulfils(constraint, ordering): # Constraint needs to be a list
+	# print("Constraint is: ",constraint)
+	# print("Ordering is: ",ordering)
+	# print(constraint)
+	dependency = ordering.index(constraint[-1])
+	first_val = ordering.index(constraint[0])
+	second_val = ordering.index(constraint[1])
+	return (not (first_val <= dependency <= second_val)) and (not (second_val <= dependency <= first_val))
+
+
+
+
+def markov_solver(constraints, wizards):
+	num_constraints = len(list(set(constraints)))
+	constraints = list(set(constraints))
+	# Swap state
+
+	constraints_violated_current = num_constraints - np.count_nonzero([fulfils(x, wizards) for x in constraints])
+
+	# Make a copy of the values so you can return to previous state
+	new_state = list(wizards)
+
+	beta = 1.5  # Update beta's
+
+	while constraints_violated_current > 0:
+
+		# New additions to drop faster
+		num_swaps = 1
+		if constraints_violated_current <=10:
+			num_swaps = 1
+		elif constraints_violated_current <= 20:
+			num_swaps = 20
+		elif constraints_violated_current <= 30:
+			num_swaps = 50
+
+
+		new_state = list(wizards) # Potentially redundant but eh?
+
+		for i in range(1):  # Big jumps at the beginning
+			start_swap = random.randint(0, len(new_state) - 1)
+			end_swap = random.randint(0, len(new_state) - 1)
+			new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
+
+
+
+		constraints_violated_new = num_constraints - np.count_nonzero(
+			[fulfils(x, new_state) for x in constraints])
+
+		# New additions
+		if constraints_violated_new < 10:
+			beta = 3
+
+		elif constraints_violated_new <= 20:
+			beta = 2.5
+
+		elif constraints_violated_new <= 30:
+			beta = 2.0
+
+		# End new additions
+
+		try:
+			probability_transfer = e ** (beta * (constraints_violated_current - constraints_violated_new))
+		except ZeroDivisionError:
+			return " ".join(new_state)
+		selection = random.random()
+		print(constraints_violated_current)  # Weight the constraints somehow
+		if selection < probability_transfer:
+			wizards = list(new_state)
+			constraints_violated_current = constraints_violated_new
+
+	return " ".join(new_state)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""" Testing Stuff"""
 def fulfils_k_constraints(ordering, constraints,num,mapping_scheme):
 	total_mapping = string.ascii_lowercase + string.ascii_uppercase
 	i = 0
@@ -90,98 +193,13 @@ def find_matching(output_file,num):
 
 
 
-def supervisor():
-	output = []
-	files = sorted([x for x in os.listdir(".") if "output" not in x])
-	for input_file in files:
-		wiz, constraints, backwards_mapping,forwards_mapping = new_parser(input_file)
-		return_val = markov_solver(constraints, wiz)
-		actual_ordering = ""
-		for element in return_val:
-			actual_ordering += backwards_mapping[element] + " "
-		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7],input_file[-4])
-		with open(output_file, "a") as file:
-			file.write(actual_ordering.strip())
-		output.append(actual_ordering.strip())
-		os.system("say {0}".format(input_file))
-	return output
 
 
 
 
 
-def fulfils(constraint, ordering): # Constraint needs to be a list
-	# print("Constraint is: ",constraint)
-	# print("Ordering is: ",ordering)
-	# print(constraint)
-	dependency = ordering.index(constraint[-1])
-	first_val = ordering.index(constraint[0])
-	second_val = ordering.index(constraint[1])
-	return (not (first_val <= dependency <= second_val)) and (not (second_val <= dependency <= first_val))
 
-
-
-
-def markov_solver(constraints, wizards):
-	num_constraints = len(list(set(constraints)))
-	constraints = list(set(constraints))
-	# Swap state
-
-	constraints_violated_current = num_constraints - np.count_nonzero([fulfils(x, wizards) for x in constraints])
-
-	new_state = list(wizards)
-
-	beta = 1.5  # Update beta's
-
-	while constraints_violated_current > 0:
-
-		# New additions to drop faster
-		num_swaps = 1
-		if constraints_violated_current <=10:
-			num_swaps = 1
-		elif constraints_violated_current <= 20:
-			num_swaps = 20
-		elif constraints_violated_current <= 30:
-			num_swaps = 50
-
-
-		new_state = list(wizards)
-
-		for i in range(1):  # Big jumps at the beginning
-			start_swap = random.randint(0, len(new_state) - 1)
-			end_swap = random.randint(0, len(new_state) - 1)
-			new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
-
-		print(wizards, "".join(new_state))
-
-		constraints_violated_new = num_constraints - np.count_nonzero(
-			[fulfils(x, "".join(new_state)) for x in constraints])
-
-		# New additions
-		if constraints_violated_new < 10:
-			beta = 3
-
-		elif constraints_violated_new <= 20:
-			beta = 2.5
-
-		elif constraints_violated_new <= 30:
-			beta = 2.0
-
-		# End new additions
-
-		try:
-			probability_transfer = e ** (beta * (constraints_violated_current - constraints_violated_new))
-		except ZeroDivisionError:
-			return "".join(new_state)
-		selection = random.random()
-		print(constraints_violated_current)  # Weight the constraints somehow
-		if selection < probability_transfer:
-			wizards = "".join(new_state)
-			constraints_violated_current = constraints_violated_new
-
-	return "".join(new_state)
-
-
+""""Unnecessary stuff """
 def markov_walk(constraints, wizards):
 	num_constraints = len(list(set(constraints)))
 	constraints = list(set(constraints))
