@@ -18,7 +18,7 @@ def parser(filename):
 
 def new_parser(filename):
 	# Convert wizards into single char representations
-	total_mapping = string.ascii_lowercase + string.ascii_uppercase
+	total_mapping = string.ascii_lowercase + string.ascii_uppercase + "".join([str(k) for k in list(range(350))])
 	forward_mapping = {}
 	backwards_mapping = {}
 
@@ -107,7 +107,7 @@ def supervisor(output_file):
 	output = []
 	files = sorted([x for x in os.listdir(".") if x != output_file])
 	for input_file in files:
-		wiz, constraints, backwards_mapping = new_parser(input_file)
+		wiz, constraints, backwards_mapping,forwards_mapping = new_parser(input_file)
 		return_val = markov_solver(constraints, wiz)
 		actual_ordering = ""
 		for element in return_val:
@@ -300,16 +300,27 @@ def markov_solver(constraints, wizards):
 
 	beta = 1.5  # Update beta's
 
-	while constraints_violated_current > 5:
+	while constraints_violated_current > 0:
+
+		# New additions to drop faster
+		num_swaps = 1
+		if constraints_violated_current <=10:
+			num_swaps = 1
+		elif constraints_violated_current <= 20:
+			num_swaps = 20
+		elif constraints_violated_current <= 30:
+			num_swaps = 50
+
 
 		new_state = list(wizards)
 
 		for i in range(1):  # Big jumps at the beginning
-			start_swap = random.randint(0, len(wizards) - 1)
-			end_swap = random.randint(0, len(wizards) - 1)
+			start_swap = random.randint(0, len(new_state) - 1)
+			end_swap = random.randint(0, len(new_state) - 1)
 			new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
 
 		print(wizards, "".join(new_state))
+
 		constraints_violated_new = num_constraints - np.count_nonzero(
 			[fulfils(x, "".join(new_state)) for x in constraints])
 
