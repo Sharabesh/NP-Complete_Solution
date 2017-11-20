@@ -2,10 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8b7ffc-1d1e-45ef-8f59-b6489795484b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outputs.zip" afterPath="$PROJECT_DIR$/outputs.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/abeValidator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_0.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_0.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_1.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_1.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_2.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_2.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_3.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_3.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_4.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_4.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_5.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_5.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_6.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_6.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_7.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_7.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_8.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_8.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/input20_9.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/input20_9.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs20/output20.out" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs20/output20.out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_0.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_0.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_1.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_1.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_2.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_2.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_3.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_3.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_4.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_4.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_5.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_5.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_6.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_6.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_7.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_7.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_8.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_8.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/input35_9.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/input35_9.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs35/output35_jared.out" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs35/output35_jared.out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_0.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_0.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_1.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_1.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_2.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_2.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_3.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_3.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_4.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_4.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_5.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_5.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_6.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_6.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_7.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_7.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_8.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_8.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/input50_9.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/input50_9.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/inputs50/output50.out" afterPath="$PROJECT_DIR$/phase2_inputs_2/inputs50/output50.out" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_100.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_100.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_120.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_120.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_140.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_140.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_160.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_160.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_180.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_180.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_200.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_200.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_220.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_220.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_240.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_240.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_260.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_260.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_280.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_280.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_300.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_300.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_320.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_320.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_340.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_340.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_360.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_360.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_380.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_380.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_400.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_400.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_60.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_60.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_80.in" afterPath="$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_80.in" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exponential_solution.py" afterPath="$PROJECT_DIR$/exponential_solution.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/outputs/output20_1.out" afterPath="$PROJECT_DIR$/outputs/output20_1.out" />
     </list>
     <ignored path="proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,14 +91,21 @@
       <file leaf-file-name="abeValidator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/abeValidator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9230769">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.44444445">
+              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,6 +145,7 @@
         <option value="$PROJECT_DIR$/outputs/output50_9.out" />
         <option value="$PROJECT_DIR$/exponential_solution.py" />
         <option value="$PROJECT_DIR$/outputs/output20_1.out" />
+        <option value="$PROJECT_DIR$/abeValidator.py" />
       </list>
     </option>
   </component>
@@ -127,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -145,9 +203,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phase2_inputs_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outputs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -157,6 +242,208 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistoryKey" value="markov&#9;null&#9;null&#10;supervisor&#9;null&#9;null" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v5.1.0/bin/node" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="proj" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -175,7 +462,7 @@
     <frame x="0" y="22" width="1280" height="746" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19386107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19709209" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -211,13 +498,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/polynomial_greedy.py">
+    <entry file="file://$PROJECT_DIR$/exponential_solution.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="false" />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polynomial_greedy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -225,7 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -233,7 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -241,9 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -251,7 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -259,7 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02388535">
           <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -267,9 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -277,7 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="135" selection-start-line="0" selection-start-column="135" selection-end-line="0" selection-end-column="135" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -285,7 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="124" selection-start-line="0" selection-start-column="124" selection-end-line="0" selection-end-column="124" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -293,7 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -301,7 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="137" selection-start-line="0" selection-start-column="137" selection-end-line="0" selection-end-column="137" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -309,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="126" selection-start-line="0" selection-start-column="126" selection-end-line="0" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -317,7 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="138" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -325,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="138" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -333,7 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="126" selection-start-line="0" selection-start-column="126" selection-end-line="0" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -341,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="233" selection-start-line="0" selection-start-column="233" selection-end-line="0" selection-end-column="233" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -349,7 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="224" selection-start-line="0" selection-start-column="224" selection-end-line="0" selection-end-column="224" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -357,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="187" selection-start-line="0" selection-start-column="187" selection-end-line="0" selection-end-column="187" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -365,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="241" selection-start-line="0" selection-start-column="241" selection-end-line="0" selection-end-column="241" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -373,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="224" selection-start-line="0" selection-start-column="224" selection-end-line="0" selection-end-column="224" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -381,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="235" selection-start-line="0" selection-start-column="235" selection-end-line="0" selection-end-column="235" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -389,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="243" selection-start-line="0" selection-start-column="243" selection-end-line="0" selection-end-column="243" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -397,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="228" selection-start-line="0" selection-start-column="228" selection-end-line="0" selection-end-column="228" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -405,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="228" selection-start-line="0" selection-start-column="228" selection-end-line="0" selection-end-column="228" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -413,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="242" selection-start-line="0" selection-start-column="242" selection-end-line="0" selection-end-column="242" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -421,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="322" selection-start-line="0" selection-start-column="322" selection-end-line="0" selection-end-column="322" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -429,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="340" selection-start-line="0" selection-start-column="340" selection-end-line="0" selection-end-column="340" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -437,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="334" selection-start-line="0" selection-start-column="334" selection-end-line="0" selection-end-column="334" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -445,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="346" selection-start-line="0" selection-start-column="346" selection-end-line="0" selection-end-column="346" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -453,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="319" selection-start-line="0" selection-start-column="319" selection-end-line="0" selection-end-column="319" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -461,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="348" selection-start-line="0" selection-start-column="348" selection-end-line="0" selection-end-column="348" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -469,15 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="346" selection-start-line="0" selection-start-column="346" selection-end-line="0" selection-end-column="346" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outputs/output50_6.out">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="348" selection-start-line="0" selection-start-column="348" selection-end-line="0" selection-end-column="348" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -485,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="357" selection-start-line="0" selection-start-column="357" selection-end-line="0" selection-end-column="357" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -493,15 +743,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="355" selection-start-line="0" selection-start-column="355" selection-end-line="0" selection-end-column="355" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phase2_inputs 2/staff_inputs/staff_60.in">
+    <entry file="file://$PROJECT_DIR$/phase2_inputs_2/staff_inputs/staff_60.in">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -509,7 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="138" selection-start-line="0" selection-start-column="138" selection-end-line="0" selection-end-column="138" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -517,7 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -525,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="126" selection-start-line="0" selection-start-column="126" selection-end-line="0" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -533,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="137" selection-start-line="0" selection-start-column="137" selection-end-line="0" selection-end-column="137" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,10 +791,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/outputs/output50_6.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="348" selection-start-line="0" selection-start-column="348" selection-end-line="0" selection-end-column="348" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/abeValidator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9230769">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.44444445">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
           <folding />
         </state>
       </provider>
