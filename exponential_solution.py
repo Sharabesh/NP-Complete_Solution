@@ -14,7 +14,11 @@ def supervisor(): # Designed to run within an input directory
 	for input_file in files:
 		wiz, constraints = new_parser(input_file)
 		return_val = markov_solver(constraints, wiz)
-		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7],input_file[-4])
+		if "staff" in input_file:
+			num = input_file.split("_")[1].split(".")[0]
+			output_file = "../../staff_{0}.out".format(num)
+		else:
+			output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7],input_file[-4])
 		with open(output_file, "a") as file:
 			file.write(return_val.strip())
 		output.append(return_val.strip())
@@ -76,9 +80,11 @@ def fulfils(constraint, ordering): # Constraint needs to be a list
 	# print("Constraint is: ",constraint)
 	# print("Ordering is: ",ordering)
 	# print(constraint)
+
 	dependency = ordering.index(constraint[-1])
 	first_val = ordering.index(constraint[0])
 	second_val = ordering.index(constraint[1])
+
 	return (not (first_val <= dependency <= second_val)) and (not (second_val <= dependency <= first_val))
 
 
