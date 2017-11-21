@@ -62,7 +62,7 @@ def validate(inputs, outputs):
     return True
 
 
-def validate_all(input_dir, output_dir):
+def validate_all(input_dir):
     input_files = [x for x in os.listdir(input_dir) if "output" not in x]
     vals = []
     for elem in input_files:
