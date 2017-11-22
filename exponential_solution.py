@@ -16,7 +16,7 @@ def supervisor():  # Designed to run within an input directory
 		return_val = markov_solver(constraints, wiz)
 		if "staff" in input_file:
 			num = input_file.split("_")[1].split(".")[0]
-			output_file = "../../staff_{0}.out".format(num)
+			output_file = "../../outputs/staff_{0}.out".format(num)
 		else:
 			output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7], input_file[-4])
 		with open(output_file, "a") as file:
@@ -107,7 +107,7 @@ def markov_solver(constraints, wizards):
 
 	beta = 1.5  # Update beta's
 
-	while constraints_violated_current > 0:
+	while constraints_violated_current > 20:
 
 		# New additions to drop faster
 		num_swaps = 1
