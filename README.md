@@ -9,8 +9,7 @@
 * ```supervisor_multithreaded()``` 
 
 Pushing solutions 
-
-*```cd out to cs170 directory```
+* ```cd out to cs170 directory```
 * ``` git checkout -b inputs<num>_<your_name_here>```
 * ``` git add .```
 * ``` git commit -m "commit message"``` 
