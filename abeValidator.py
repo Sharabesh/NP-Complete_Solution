@@ -38,17 +38,12 @@ def validate(inputs, outputs):
         second = currConstraint[1]
         third = currConstraint[2]
 
-        # makes sure each wizard in our ordering satisfyings the constraint
-        print(wiz)
-        print(first, second, third)
-
         for name in wiz:
             if name == first or name == second:
                 count += 1
             if name == third and (count == 0 or count == 2):
                 inMiddle = True
                 count += 1
-        print("count", count)
         if count != 3:
             print("didn't find all three wizards")
             print(first, second, third)
