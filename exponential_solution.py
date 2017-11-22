@@ -44,7 +44,7 @@ def inner_helper(input_file):
 	return_val = markov_solver(constraints, wiz)
 	if "staff" in input_file:
 		num = input_file.split("_")[1].split(".")[0]
-		output_file = "../../staff_{0}.out".format(num)
+		output_file = "../../outputs/staff_{0}.out".format(num)
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7], input_file[-4])
 	with open(output_file, "w+") as file:
