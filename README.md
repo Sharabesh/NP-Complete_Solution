@@ -10,9 +10,9 @@
 
 Pushing solutions 
 * ```cd out to cs170 directory```
-* ``` git checkout -b inputs<num>_<your_name_here>```
+* ``` git checkout -b inputs<num>_<your_name_here>``` EG ``` git checkout -b inputs20_jared```
 * ``` git add .```
 * ``` git commit -m "commit message"``` 
-* ``` git push origin inputs_<your_name_here> ```
+* ``` git push origin inputs_<your_name_here> ``` EG ```git push origin inputs20_jared```
 
 
