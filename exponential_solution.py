@@ -109,6 +109,10 @@ def markov_solver(constraints, wizards):
 
 	while constraints_violated_current > 0:
 
+		"""Print statements to allow premature stopping"""
+		if constraints_violated_current == 50 or constraints_violated_current == 20 or constraints_violated_current == 10:
+			print("ORDERING FOR {0} WIZARDS WITH {1} CONSTRAINTS VIOLATED IS {2}").format(len(wizards), constraints_violated_current, " ".join(wizards))
+
 		# New additions to drop faster
 		num_swaps = 1
 		if constraints_violated_current <= 10:
@@ -127,6 +131,7 @@ def markov_solver(constraints, wizards):
 
 		constraints_violated_new = num_constraints - np.count_nonzero(
 			[fulfils(x, new_state) for x in constraints])
+
 
 		# New additions
 
