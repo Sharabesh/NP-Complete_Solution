@@ -38,8 +38,6 @@ def validate(inputs, outputs):
         second = currConstraint[1]
         third = currConstraint[2]
 
-        # makes sure each wizard in our ordering satisfyings the constraint
-
 
         for name in wiz:
             if name == first or name == second:
