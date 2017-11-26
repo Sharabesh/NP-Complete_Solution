@@ -107,7 +107,7 @@ def markov_solver(constraints, wizards):
 
 	beta = 1.5  # Update beta's
 
-	while constraints_violated_current > 0:
+	while constraints_violated_current > 10:
 
 		# New additions to drop faster
 		num_swaps = 1
