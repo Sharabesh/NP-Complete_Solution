@@ -11,10 +11,14 @@ If running in an instructional machine:
 * ```supervisor_multithreaded()``` 
 * ```Ctrl-b```
 * ```d (Don't have the control key held)``` 
+
 The terminal can now be shut down. To return to the program and to view state use:
+
 * ```ssh <the machine>```
 * ```tmux attach```
+
 You can now exit the procedure using the same commands: 
+
 * ```Ctrl-b```
 * ```d (Don't have the control key held)``` 
 
