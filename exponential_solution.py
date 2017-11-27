@@ -24,7 +24,7 @@ def supervisor():  # Designed to run within an input directory
 		output.append(return_val.strip())
 		os.system("say {0}".format(input_file))
 	return output
-
+ 
 
 """ Speed up the process with multithreading"""
 
@@ -53,7 +53,7 @@ def inner_helper(input_file):
 	return return_val
 
 
-def new_parser(filename):
+def new_parser(filename,use_original=True):
 	# Convert wizards into single char representations
 
 	with open(filename, "r") as file:
@@ -72,9 +72,22 @@ def new_parser(filename):
 			wiz_set.add(item)
 
 	# Convert all the data to single character representations
+	output_file = ""
+	if "staff" in filename:
+		num = filename.split("_")[1].split(".")[0]
+		output_file = "../../outputs/staff_{0}.out".format(num)
+	else:
+		output_file = "../../outputs/output{0}_{1}.out".format(filename[5:7], filename[-4])
+	with open(output_file,"r") as file:
+		k = file.read()
+	k = k.replace("\n","")
+	z = k.split()
+	return_val = list(wiz_set)
+	if use_original:
+		if set(z) == wiz_set:
+			return_val = list(z)
 
-
-	return (list(wiz_set), constraints_list)
+	return (return_val, constraints_list)
 
 
 def fulfils(constraint, ordering):  # Constraint needs to be a list
