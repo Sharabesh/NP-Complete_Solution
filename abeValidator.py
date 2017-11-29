@@ -24,11 +24,10 @@ def validate(inputs, outputs):
 
     # reads through all our orderings of wizards
     wiz = wiz[0].split(" ")
-
+    Violations = 0
     # checks to see if it satisfies all contraints
     for j in range(2, numConstraints + 2):
         count = 0
-        Violations = 0
         inMiddle = False
 
         # the current constraint that we are trying to satisfy
@@ -46,12 +45,7 @@ def validate(inputs, outputs):
                 inMiddle = True
                 count += 1
 
-        if count != 3:
-            print("didn't find all three wizards")
-            print("Number of Violations: ", count)
-            print(first, second, third)
-            Violations += 1
-        elif not inMiddle:
+        if not inMiddle:
             print("ordering is wrong here")
             print("Number of Violations: ", count)
             print(first, second, third)
