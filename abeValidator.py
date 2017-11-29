@@ -38,7 +38,6 @@ def validate(inputs, outputs):
         second = currConstraint[1]
         third = currConstraint[2]
 
-
         for name in wiz:
             if name == first or name == second:
                 count += 1
@@ -48,15 +47,15 @@ def validate(inputs, outputs):
 
         if count != 3:
             print("didn't find all three wizards")
+            print("Number of Violations: ", count)
             print(first, second, third)
-            return
         elif not inMiddle:
             print("ordering is wrong here")
+            print("Number of Violations: ", count)
             print(first, second, third)
-            return False
 
-    print("all good -Abe")
-    return True
+    print("Number of Violations: ", count)
+    return numConstraints == 0
 
 
 def validate_all(input_dir):
