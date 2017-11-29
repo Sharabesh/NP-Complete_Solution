@@ -47,7 +47,7 @@ def validate(inputs, outputs):
 
         if not inMiddle:
             print("ordering is wrong here")
-            print("Number of Violations: ", count)
+            print("Number of Violations: ", Violations)
             print(first, second, third)
             Violations += 1
 
