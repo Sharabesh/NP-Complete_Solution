@@ -5,6 +5,7 @@ from math import e
 import string
 import os
 import concurrent.futures
+import time
 
 
 def supervisor():  # Designed to run within an input directory
@@ -123,6 +124,8 @@ def markov_solver(constraints, wizards, output_file=None):
 	beta = 1.5  # Update beta's
 
 	while constraints_violated_current > 0:
+		if (time.time() // 1) % 10 == 0:
+			print("\n\n\n\n"," ".join(wizards))
 
 		"""Print statements to allow premature stopping"""
 		if constraints_violated_current == 100 or constraints_violated_current == 50 or constraints_violated_current == 30 or constraints_violated_current == 20 or constraints_violated_current == 5:
