@@ -41,12 +41,13 @@ def supervisor_multithreaded():
 
 def inner_helper(input_file):
 	wiz, constraints = new_parser(input_file)
-	return_val = markov_solver(constraints, wiz)
 	if "staff" in input_file:
 		num = input_file.split("_")[1].split(".")[0]
 		output_file = "../../outputs/staff_{0}.out".format(num)
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7], input_file[-4])
+
+	return_val = markov_solver(constraints, wiz,output_file=output_file)
 	with open(output_file, "w+") as file:
 		file.write(return_val.strip())
 	os.system("say {0}".format(input_file))
@@ -108,10 +109,11 @@ def fulfils(constraint, ordering):  # Constraint needs to be a list
 	# return (not (first_val < dependency <= second_val)) and (not (second_val <= dependency <= first_val))
 
 
-def markov_solver(constraints, wizards):
+def markov_solver(constraints, wizards, output_file=None):
 	num_constraints = len(list(set(constraints)))
 	constraints = list(set(constraints))
 	# Swap state
+	curr_min = 100
 
 	constraints_violated_current = num_constraints - np.count_nonzero([fulfils(x, wizards) for x in constraints])
 
@@ -123,8 +125,14 @@ def markov_solver(constraints, wizards):
 	while constraints_violated_current > 0:
 
 		"""Print statements to allow premature stopping"""
-		if constraints_violated_current == 50 or constraints_violated_current == 20 or constraints_violated_current == 10:
-			print("ORDERING FOR {0} WIZARDS WITH {1} CONSTRAINTS VIOLATED IS {2}".format(len(wizards), constraints_violated_current, " ".join(wizards)))
+		if constraints_violated_current == 100 or constraints_violated_current == 50 or constraints_violated_current == 30 or constraints_violated_current == 20 or constraints_violated_current == 5:
+			if (constraints_violated_current < curr_min):
+				# Write to a file
+				curr_min -= 25
+				if output_file:
+					with open(output_file,"w+") as file:
+						file.write(" ".join(wizards).strip())
+
 
 		# New additions to drop faster
 		num_swaps = 1
