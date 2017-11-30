@@ -24,7 +24,7 @@ def supervisor():  # Designed to run within an input directory
 		output.append(return_val.strip())
 		os.system("say {0}".format(input_file))
 	return output
- 
+
 
 """ Speed up the process with multithreading"""
 
@@ -124,7 +124,7 @@ def markov_solver(constraints, wizards):
 
 		"""Print statements to allow premature stopping"""
 		if constraints_violated_current == 50 or constraints_violated_current == 20 or constraints_violated_current == 10:
-			print("ORDERING FOR {0} WIZARDS WITH {1} CONSTRAINTS VIOLATED IS {2}").format(len(wizards), constraints_violated_current, " ".join(wizards))
+			print("ORDERING FOR {0} WIZARDS WITH {1} CONSTRAINTS VIOLATED IS {2}".format(len(wizards), constraints_violated_current, " ".join(wizards)))
 
 		# New additions to drop faster
 		num_swaps = 1
