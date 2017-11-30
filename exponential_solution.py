@@ -125,7 +125,7 @@ def markov_solver(constraints, wizards, output_file=None):
 
 	while constraints_violated_current > 0:
 		if (time.time() // 1) % 10 == 0:
-			print("\n\n\n\n Staff_{0}\n".format(output_file)," ".join(wizards))
+			print("Staff_{0} Constraints violated {1}".format(output_file,constraints_violated_current)," ".join(wizards))
 
 		"""Print statements to allow premature stopping"""
 		if constraints_violated_current == 100 or constraints_violated_current == 50 or constraints_violated_current == 30 or constraints_violated_current == 20 or constraints_violated_current == 5:
