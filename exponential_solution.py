@@ -34,6 +34,8 @@ def inner_helper(input_file):
 	if "staff" in input_file:
 		num = input_file.split("_")[1].split(".")[0]
 		output_file = "../../outputs/staff_{0}.out".format(num)
+	elif "submission" in input_file:
+		output_file = "../../phase3_outputs/{0}".format(input_file.replace(".in",".out"))
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7], input_file[-4])
 
@@ -71,6 +73,8 @@ def new_parser(filename,use_original=True):
 	if "staff" in filename:
 		num = filename.split("_")[1].split(".")[0]
 		output_file = "../../outputs/staff_{0}.out".format(num)
+	elif "submission" in input_file:
+		output_file = "../../phase3_outputs/{0}".format(input_file.replace(".in",".out"))
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(filename[5:7], filename[-4])
 	with open(output_file,"r") as file:
