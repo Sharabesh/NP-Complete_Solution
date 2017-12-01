@@ -22,6 +22,7 @@ such that on conclusion of the inputs it identifies the output directories: ../.
 and writes into that file. 
 """
 def supervisor_multithreaded():
+	print("HELLO")
 	executor = concurrent.futures.ProcessPoolExecutor(20)
 	files = sorted([x for x in os.listdir(".") if "output" not in x])
 	for input_file in files:
@@ -73,8 +74,9 @@ def new_parser(filename,use_original=True):
 	if "staff" in filename:
 		num = filename.split("_")[1].split(".")[0]
 		output_file = "../../outputs/staff_{0}.out".format(num)
-	elif "submission" in input_file:
-		output_file = "../../phase3_outputs/{0}".format(input_file.replace(".in",".out"))
+	elif "submission" in filename:
+		output_file = "../../phase3_outputs/{0}".format(filename.replace(".in",".out"))
+		print(output_file)
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(filename[5:7], filename[-4])
 	with open(output_file,"r") as file:
