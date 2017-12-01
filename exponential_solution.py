@@ -31,7 +31,7 @@ def supervisor():  # Designed to run within an input directory
 
 
 def supervisor_multithreaded():
-	executor = concurrent.futures.ProcessPoolExecutor(10)
+	executor = concurrent.futures.ProcessPoolExecutor(20)
 	files = sorted([x for x in os.listdir(".") if "output" not in x])
 	for input_file in files:
 		executor.submit(inner_helper, (input_file))
@@ -127,16 +127,6 @@ def markov_solver(constraints, wizards, output_file=None):
 		if (time.time() // 1) % 10 == 0:
 			print("Staff_{0} Constraints violated {1}".format(output_file,constraints_violated_current)," ".join(wizards))
 
-		"""Print statements to allow premature stopping"""
-		if constraints_violated_current == 100 or constraints_violated_current == 50 or constraints_violated_current == 30 or constraints_violated_current == 20 or constraints_violated_current == 5:
-			if (constraints_violated_current < curr_min):
-				# Write to a file
-				curr_min -= 25
-				if output_file:
-					with open(output_file,"w+") as file:
-						file.write(" ".join(wizards).strip())
-
-
 		# New additions to drop faster
 		num_swaps = 1
 		if constraints_violated_current <= 10:
@@ -161,9 +151,9 @@ def markov_solver(constraints, wizards, output_file=None):
 
 
 		if constraints_violated_new < 10:
-			beta = 3
-		if constraints_violated_new <= 20:
-			beta = 2.5
+			beta = 9
+		elif constraints_violated_new <= 20:
+			beta = 2
 
 		elif constraints_violated_new <= 30:
 			beta = 2.0
