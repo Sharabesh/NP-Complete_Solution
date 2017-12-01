@@ -22,7 +22,7 @@ such that on conclusion of the inputs it identifies the output directories: ../.
 and writes into that file. 
 """
 def supervisor_multithreaded():
-	print("HELLO")
+	
 	executor = concurrent.futures.ProcessPoolExecutor(20)
 	files = sorted([x for x in os.listdir(".") if "output" not in x])
 	for input_file in files:
@@ -36,10 +36,10 @@ def inner_helper(input_file):
 		num = input_file.split("_")[1].split(".")[0]
 		output_file = "../../outputs/staff_{0}.out".format(num)
 	elif "submission" in input_file:
-		output_file = "../../phase3_outputs/{0}".format(input_file.replace(".in",".out"))
+		val = input_file.replace(".in",".out")
+		output_file = "../../phase3_outputs/{0}".format(val)
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(input_file[5:7], input_file[-4])
-
 	return_val = markov_solver(constraints, wiz,output_file=output_file)
 	with open(output_file, "w+") as file:
 		file.write(return_val.strip())
@@ -76,17 +76,17 @@ def new_parser(filename,use_original=True):
 		output_file = "../../outputs/staff_{0}.out".format(num)
 	elif "submission" in filename:
 		output_file = "../../phase3_outputs/{0}".format(filename.replace(".in",".out"))
-		print(output_file)
 	else:
 		output_file = "../../outputs/output{0}_{1}.out".format(filename[5:7], filename[-4])
-	with open(output_file,"r") as file:
-		k = file.read()
-	k = k.replace("\n","")
-	z = k.split()
 	return_val = list(wiz_set)
-	if use_original:
-		if set(z) == wiz_set:
-			return_val = list(z)
+	if os.path.exists(output_file):
+		with open(output_file,"r") as file:
+			k = file.read()
+		k = k.replace("\n","")
+		z = k.split()
+		if use_original:
+			if set(z) == wiz_set:
+				return_val = list(z)
 
 	return (return_val, constraints_list)
 
