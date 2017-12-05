@@ -159,12 +159,12 @@ def markov_solver(constraints, wizards, output_file=None):
 		# New additions
 
 		if constraints_violated_new < 10:
-			beta = 5
-		elif constraints_violated_new <= 20:
 			beta = 6
+		elif constraints_violated_new <= 20:
+			beta = 8
 
 		elif constraints_violated_new <= 30:
-			beta = 2.0
+			beta = 1.5
 
 		# End new additions
 
