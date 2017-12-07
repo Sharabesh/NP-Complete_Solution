@@ -134,7 +134,7 @@ def markov_solver(constraints, wizards, output_file=None):
 
 	beta = 1.5  # Update beta's
 
-	while constraints_violated_current > 0:
+	while constraints_violated_current > 25:
 		if (time.time() // 1) % 10 == 0:
 			print("Staff_{0} Constraints violated {1}".format(output_file,constraints_violated_current)," ".join(wizards))
 
