@@ -134,7 +134,7 @@ def markov_solver(constraints, wizards, output_file=None):
 
 	beta = 1.5  # Update beta's
 
-	while constraints_violated_current > 25:
+	while constraints_violated_current > 0:
 		if (time.time() // 1) % 10 == 0:
 			print("Staff_{0} Constraints violated {1}".format(output_file,constraints_violated_current)," ".join(wizards))
 
@@ -152,7 +152,8 @@ def markov_solver(constraints, wizards, output_file=None):
 		for i in range(1):  # Big jumps at the beginning
 			start_swap = random.randint(0, len(new_state) - 1)
 			end_swap = random.randint(0, len(new_state) - 1)
-			new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
+			new_state.insert(end_swap,new_state.pop(start_swap))
+			# new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
 
 		constraints_violated_new = num_constraints - np.count_nonzero(
 			[fulfils(x, new_state) for x in constraints])
