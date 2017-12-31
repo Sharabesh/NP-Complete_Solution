@@ -152,19 +152,20 @@ def markov_solver(constraints, wizards, output_file=None):
 		for i in range(1):  # Big jumps at the beginning
 			start_swap = random.randint(0, len(new_state) - 1)
 			end_swap = random.randint(0, len(new_state) - 1)
-			new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
+			new_state.insert(end_swap,new_state.pop(start_swap))
+			# new_state[start_swap], new_state[end_swap] = new_state[end_swap], new_state[start_swap]
 
 		constraints_violated_new = num_constraints - np.count_nonzero(
 			[fulfils(x, new_state) for x in constraints])
 		# New additions
 
 		if constraints_violated_new < 10:
-			beta = 5
-		elif constraints_violated_new <= 20:
 			beta = 6
+		elif constraints_violated_new <= 20:
+			beta = 8
 
 		elif constraints_violated_new <= 30:
-			beta = 2.0
+			beta = 1.5
 
 		# End new additions
 
