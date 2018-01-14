@@ -1,4 +1,8 @@
-# cs170
+# Approximating an NP-Complete Betweeness Problem
+The following is the problem definition: <br>
+A set of constraints are provided as follows:<br> 
+  - A B C (Which indicates C cannot fall between A and B)
+We seek to find an optimal ordering of our set of elements such that all the constraints are fulfilled
 
 
 ### Running the program (type these commands exactly)
